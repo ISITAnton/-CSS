@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Заголовок лабораторной работы</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#section1">Раздел 1</a></li>
+            <li><a href="#section2">Раздел 2</a></li>
+            <li><a href="#section3">Раздел 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="section1">
+            <h2>Раздел 1</h2>
+            <p>Содержимое раздела 1.</p>
+        </section>
+        <section id="section2">
+            <h2>Раздел 2</h2>
+            <p>Содержимое раздела 2.</p>
+        </section>
+        <section id="section3">
+            <h2>Раздел 3</h2>
+            <p>Содержимое раздела 3.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
+
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Безопасный шрифт */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background: #444;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+section {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Медиазапросы */
+@media (min-width: 600px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section {
+        flex: 1 1 calc(33% - 20px);
+        margin: 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    section {
+        flex: 1 1 100%;
+    }
+}
